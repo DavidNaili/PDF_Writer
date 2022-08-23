@@ -10,23 +10,24 @@ public class Document_Creation {
     */
    public static void main(String args[]) throws IOException {
 
-      // Creating PDF document object
+      // Erstellen eines PDF Dokuments
       PDDocument document = new PDDocument();
 
+      // In dieser Schleife werden Seiten erstellt
       for (int i = 0; i < 10; i++) {
-         // Creating a blank page
+         // Erstellen einer leeren Seite
          PDPage blankPage = new PDPage();
 
-         // Adding the blank page to the document
+         // Leere Seiten dem Dokument hinzufügen
          document.addPage(blankPage);
       }
 
-      // Saving the document
+      // Speichern des Dokuments
       document.save("F:/Projekt/PDF Dateien schreiben/PDF writer/Dokumente/Leere PDF.pdf");
 
       System.out.println("PDF erfolgreich erstellt");
 
-      // Closing the document
+      // Schließen des Dokuments
       document.close();
 
    }
