@@ -1,6 +1,13 @@
 import java.io.IOException;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
+
+
 import org.apache.pdfbox.pdmodel.PDDocument;
+import org.apache.pdfbox.pdmodel.PDDocumentInformation;
 import org.apache.pdfbox.pdmodel.PDPage;
+import org.apache.pdfbox.pdmodel.PDPageContentStream;
+import org.apache.pdfbox.pdmodel.font.PDType1Font;
 
 public class Document_Creation {
 
@@ -14,21 +21,96 @@ public class Document_Creation {
       PDDocument document = new PDDocument();
 
       // In dieser Schleife werden Seiten erstellt
-      for (int i = 0; i < 10; i++) {
+      for (int i = 0; i < 2; i++) {
          // Erstellen einer leeren Seite
          PDPage blankPage = new PDPage();
 
          // Leere Seiten dem Dokument hinzufügen
          document.addPage(blankPage);
       }
+       // Objekt PDDocumentInformation erhalten
+       PDDocumentInformation pdd = document.getDocumentInformation();
+
+       // Den Author des Dokumentes festlegen
+       pdd.setAuthor("David Naili");
+        
+       // Den Titel des Dokumentes festlegen
+       pdd.setTitle("Test Dokument"); 
+        
+       // Den Ersteller des Dokumentes festlegen
+       pdd.setCreator("PDF Beispiele"); 
+        
+       // Das Thema des Dokumentes festlegen
+       pdd.setSubject("Beispiel Dokument"); 
+        
+       // Das Datum des erstellten Dokumentes festlegen
+       Calendar date = new GregorianCalendar();
+       date.set(2022, 8, 23); 
+       pdd.setCreationDate(date);
+       // Das Datum des veränderten Dokumentes festlegen
+       date.set(2022, 8, 23); 
+       pdd.setModificationDate(date); 
+        
+       // Schlüsselwörter für das Dokument festlegen
+       pdd.setKeywords("Probe, erstes Beispiel, meine pdf");
+
+      // Infos aus dem PDF Dokument empfangen
+      System.out.println("Author of the document is :"+ pdd.getAuthor());
+      System.out.println("Title of the document is :"+ pdd.getTitle());
+      System.out.println("Subject of the document is :"+ pdd.getSubject());
+      System.out.println("Creator of the document is :"+ pdd.getCreator());
+      System.out.println("Creation date of the document is :"+ pdd.getCreationDate());
+      System.out.println("Modification date of the document is :"+ pdd.getModificationDate()); 
+      System.out.println("Keywords of the document are :"+ pdd.getKeywords()); 
+       
+      // Die Seitenanzahl des Dokumentes ermitteln
+      PDPage page = document.getPage(0);
+      PDPageContentStream contentStream = new PDPageContentStream(document, page);
+      
+      // Anfangspunkt des Textes
+      contentStream.beginText();
+       
+      // Schriftart auswählen
+      contentStream.setFont(PDType1Font.TIMES_ROMAN, 20);
+
+      //Setting the leading
+      contentStream.setLeading(19.5f);
+
+      // Zeilenposition einstellen 
+      contentStream.newLineAtOffset(25, 730);
+
+      // Text schreiben
+      String text1 = "Dies ist mein erster Versuch.";
+      String text2 = "Und dies ist die Erweiterung.";
+      String text3 = "Noch eine Zeile mehr!";
+      String text4 = "Aller guten Dinge sind dieses mal 4.";
+
+      // Text als String hinzufügen
+      contentStream.showText(text1);
+      // Und um weitere Zeilen erweitern
+      contentStream.newLine();
+      contentStream.showText(text2);
+      contentStream.newLine();
+      contentStream.showText(text3);
+      contentStream.newLine();
+      contentStream.showText(text4);  
+
+      // Endpunkt des Textes
+      contentStream.endText();
+
+      // Konsolenausgabe
+      System.out.println("Inhalt hinzugefügt");
+
+      // Inhaltsstream schließen
+      contentStream.close();
 
       // Speichern des Dokuments
-      document.save("F:/Projekt/PDF Dateien schreiben/PDF writer/Dokumente/Leere PDF.pdf");
+      document.save("F:/Projekt/PDF Dateien schreiben/PDF writer/Dokumente/Testfile.pdf");
 
+      // Konsolenausgabe
       System.out.println("PDF erfolgreich erstellt");
 
       // Schließen des Dokuments
       document.close();
-
    }
 }
