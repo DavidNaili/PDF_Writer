@@ -10,8 +10,7 @@ public class BildHinzufuegen {
 
     void bild(PDDocument document) throws IOException {
 
-
-            // Seite ermitteln die verändert werden soll
+           // Seite ermitteln die verändert werden soll
             PDPage page1 = document.getPage(1);
 
             // PDImageXObject Objekt erstellen

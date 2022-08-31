@@ -61,6 +61,5 @@ public class Document_Creation {
 
       // Schließen des Dokuments
       document.close();
-
    }
 }
