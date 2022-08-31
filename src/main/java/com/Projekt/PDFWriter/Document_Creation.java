@@ -30,7 +30,7 @@ public class Document_Creation {
       PDDocument document = new PDDocument();
 
       // In dieser Schleife werden Seiten erstellt
-      for (int i = 0; i < 2; i++) {
+      for (int i = 0; i < 3; i++) {
          // Erstellen einer leeren Seite
          PDPage blankPage = new PDPage();
 
@@ -38,10 +38,23 @@ public class Document_Creation {
          document.addPage(blankPage);
       }
 
-   
+      Textverarbeitung Text = new Textverarbeitung();
+      Text.text(document);
+
+      BildHinzufuegen Bild = new BildHinzufuegen();
+      Bild.bild(document);
+
+      Rechteck Struktur = new Rechteck();
+      Struktur.struktur(document);
+
+      DDocumentInformation Information = new DDocumentInformation();
+      Information.information(document);
+
+      Protection Sicherheit = new Protection();
+      Sicherheit.sicherheit(document);
 
       // Speichern des Dokuments
-      document.save("F:/Projekt/PDF Dateien schreiben/PDF writer/Dokumente/Testfile1.pdf");
+      document.save("F:/Projekt/PDF Dateien schreiben/PDF writer/Dokumente/Testfile.pdf");
 
       // Konsolenausgabe
       System.out.println("PDF erfolgreich erstellt");

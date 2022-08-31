@@ -1,9 +1,6 @@
 package main.java.com.Projekt.PDFWriter;
 
-import java.io.File;
 import java.io.IOException;
-
-import org.apache.pdfbox.Loader;
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.pdmodel.PDPage;
 import org.apache.pdfbox.pdmodel.PDPageContentStream;
@@ -11,10 +8,8 @@ import org.apache.pdfbox.pdmodel.graphics.image.PDImageXObject;
 
 public class BildHinzufuegen {
 
-    void loadPDF(File file) throws IOException {
-        
-        // Ein existierendes Dokument laden
-        PDDocument document = Loader.loadPDF(file);{
+    void bild(PDDocument document) throws IOException {
+
 
             // Seite ermitteln die verändert werden soll
             PDPage page1 = document.getPage(1);
@@ -34,4 +29,4 @@ public class BildHinzufuegen {
             contents.close();
         }
     }
-}
+

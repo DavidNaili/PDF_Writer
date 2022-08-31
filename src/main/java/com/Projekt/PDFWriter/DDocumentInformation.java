@@ -1,20 +1,15 @@
 package main.java.com.Projekt.PDFWriter;
 
-import java.io.File;
 import java.io.IOException;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 
-import org.apache.pdfbox.Loader;
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.pdmodel.PDDocumentInformation;
 
 public class DDocumentInformation {
 
-    void loadPDF(File file) throws IOException {
-        
-        // Ein existierendes Dokument laden
-        PDDocument document = Loader.loadPDF(file);{
+    void information(PDDocument document) throws IOException {
 
             // Objekt PDDocumentInformation erhalten
             PDDocumentInformation pdd = document.getDocumentInformation();
@@ -53,7 +48,7 @@ public class DDocumentInformation {
             // System.out.println("Modification date of the document is :"+
             // pdd.getModificationDate());
             System.out.println("Keywords of the document are :" + pdd.getKeywords());
+            System.out.println("Daten der erstellten PDF hinzugefügt");
         }
-        System.out.println("Daten der erstellten PDF hinzugefügt");
     }
-}
+

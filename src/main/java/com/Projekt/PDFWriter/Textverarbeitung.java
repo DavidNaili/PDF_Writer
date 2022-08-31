@@ -1,20 +1,15 @@
 package main.java.com.Projekt.PDFWriter;
 
-import java.io.File;
 import java.io.IOException;
 
 import org.apache.pdfbox.pdmodel.PDPage;
-import org.apache.pdfbox.Loader;
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.pdmodel.PDPageContentStream;
 import org.apache.pdfbox.pdmodel.font.PDType1Font;
 
 public class Textverarbeitung {
 
-    void loadPDF(File file) throws IOException {
-        
-        // Ein existierendes Dokument laden
-        PDDocument document = Loader.loadPDF(file);{
+    void text(PDDocument document) throws IOException {
 
             // Die Seitenanzahl des Dokumentes ermitteln
             PDPage page = document.getPage(0);
@@ -58,4 +53,4 @@ public class Textverarbeitung {
             contentStream.close();
         }   
     }
-}
+
