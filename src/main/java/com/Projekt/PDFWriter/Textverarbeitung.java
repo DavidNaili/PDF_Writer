@@ -1,11 +1,13 @@
 package main.java.com.Projekt.PDFWriter;
 
+import java.io.File;
 import java.io.IOException;
 
 import org.apache.pdfbox.pdmodel.PDPage;
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.pdmodel.PDPageContentStream;
-import org.apache.pdfbox.pdmodel.font.PDType1Font;
+import org.apache.pdfbox.pdmodel.font.PDFont;
+import org.apache.pdfbox.pdmodel.font.PDType0Font;
 
 public class Textverarbeitung {
 
@@ -19,7 +21,8 @@ public class Textverarbeitung {
             contentStream.beginText();
 
             // Schriftart auswählen
-            contentStream.setFont(PDType1Font.TIMES_ROMAN, 20);
+            PDFont font = PDType0Font.load(document, new File("C:/Windows/Fonts/verdana.ttf"));
+            contentStream.setFont(font, 20);
 
             // Setting the leading
             contentStream.setLeading(19.5f);
