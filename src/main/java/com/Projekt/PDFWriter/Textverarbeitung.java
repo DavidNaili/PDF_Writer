@@ -24,7 +24,6 @@ public class Textverarbeitung {
             PDFont font = PDType0Font.load(document, new File("C:/Windows/Fonts/verdana.ttf"));
             contentStream.setFont(font, 20);
 
-            // Setting the leading
             contentStream.setLeading(19.5f);
 
             // Zeilenposition einstellen

@@ -14,7 +14,7 @@ public class DDocumentInformation {
             // Objekt PDDocumentInformation erhalten
             PDDocumentInformation pdd = document.getDocumentInformation();
 
-            // Den Author des Dokumentes festlegen
+            // Den Autor des Dokumentes festlegen
             pdd.setAuthor("David Naili");
 
             // Den Titel des Dokumentes festlegen
