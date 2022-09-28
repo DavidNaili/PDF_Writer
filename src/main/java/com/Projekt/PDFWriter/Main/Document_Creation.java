@@ -26,8 +26,7 @@ public class Document_Creation {
  
       // Erstellen einer neuen Datenbank und mit dieser verbinden
       H2Database Datenbank = new H2Database();
-      Datenbank.datenbank();      
-   
+      Datenbank.datenbank();
 
       // Erstellen eines PDF Dokuments
       PDDocument document = new PDDocument();
