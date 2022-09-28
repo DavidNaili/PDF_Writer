@@ -1,4 +1,4 @@
-package main.java.com.Projekt.PDFWriter;
+package main.java.com.Projekt.PDFWriter.Main;
 
 import java.io.IOException;
 import java.sql.SQLException;
@@ -8,6 +8,13 @@ import org.apache.pdfbox.pdmodel.PDPage;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import main.java.com.Projekt.PDFWriter.Klassen.BildHinzufuegen;
+import main.java.com.Projekt.PDFWriter.Klassen.DDocumentInformation;
+import main.java.com.Projekt.PDFWriter.Klassen.H2Database;
+import main.java.com.Projekt.PDFWriter.Klassen.Protection;
+import main.java.com.Projekt.PDFWriter.Klassen.Rechteck;
+import main.java.com.Projekt.PDFWriter.Klassen.Textverarbeitung;
 
 @SpringBootApplication
 

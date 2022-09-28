@@ -1,4 +1,4 @@
-package main.java.com.Projekt.PDFWriter;
+package main.java.com.Projekt.PDFWriter.Klassen;
 
 import java.io.IOException;
 import java.util.Calendar;
@@ -9,7 +9,7 @@ import org.apache.pdfbox.pdmodel.PDDocumentInformation;
 
 public class DDocumentInformation {
 
-    void information(PDDocument document) throws IOException {
+    public void information(PDDocument document) throws IOException {
 
             // Objekt PDDocumentInformation erhalten
             PDDocumentInformation pdd = document.getDocumentInformation();

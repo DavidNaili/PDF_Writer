@@ -1,4 +1,4 @@
-package main.java.com.Projekt.PDFWriter;
+package main.java.com.Projekt.PDFWriter.Klassen;
 
 import java.io.IOException;
 
@@ -10,7 +10,7 @@ import org.apache.pdfbox.pdmodel.PDPageContentStream;
 
 public class Rechteck {
 
-    void struktur(PDDocument document) throws IOException {
+    public void struktur(PDDocument document) throws IOException {
 
             // Die Seitenanzahl des Dokumentes ermitteln
             PDPage page = document.getPage(2);

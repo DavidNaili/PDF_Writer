@@ -1,4 +1,4 @@
-package main.java.com.Projekt.PDFWriter;
+package main.java.com.Projekt.PDFWriter.Klassen;
 
 import java.io.File;
 import java.io.IOException;
@@ -11,7 +11,7 @@ import org.apache.pdfbox.pdmodel.font.PDType0Font;
 
 public class Textverarbeitung {
 
-    void text(PDDocument document) throws IOException {
+    public void text(PDDocument document) throws IOException {
 
             // Die Seitenanzahl des Dokumentes ermitteln
             PDPage page = document.getPage(0);

@@ -1,4 +1,4 @@
-package main.java.com.Projekt.PDFWriter;
+package main.java.com.Projekt.PDFWriter.Klassen;
 
 import java.io.File;
 import java.io.IOException;
@@ -9,7 +9,7 @@ import org.apache.pdfbox.pdmodel.interactive.action.PDActionJavaScript;
 
 public class Javaskript {
 
-    void loadPDF(File file) throws IOException {
+    public void loadPDF(File file) throws IOException {
         // Ein existierendes Dokument laden
         PDDocument document = Loader.loadPDF(file);{
 

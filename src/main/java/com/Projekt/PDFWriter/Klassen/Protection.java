@@ -1,4 +1,4 @@
-package main.java.com.Projekt.PDFWriter;
+package main.java.com.Projekt.PDFWriter.Klassen;
 
 import java.io.IOException;
 
@@ -8,7 +8,7 @@ import org.apache.pdfbox.pdmodel.encryption.StandardProtectionPolicy;
 
 public class Protection {
 
-    void sicherheit(PDDocument document) throws IOException {
+    public void sicherheit(PDDocument document) throws IOException {
         
             // Access permission Objekt erzeugen
             AccessPermission ap = new AccessPermission();

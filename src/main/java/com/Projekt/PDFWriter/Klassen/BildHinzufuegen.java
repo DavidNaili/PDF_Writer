@@ -1,4 +1,4 @@
-package main.java.com.Projekt.PDFWriter;
+package main.java.com.Projekt.PDFWriter.Klassen;
 
 import java.io.IOException;
 import org.apache.pdfbox.pdmodel.PDDocument;
@@ -8,7 +8,7 @@ import org.apache.pdfbox.pdmodel.graphics.image.PDImageXObject;
 
 public class BildHinzufuegen {
 
-    void bild(PDDocument document) throws IOException {
+    public void bild(PDDocument document) throws IOException {
 
            // Seite ermitteln die verändert werden soll
             PDPage page1 = document.getPage(1);

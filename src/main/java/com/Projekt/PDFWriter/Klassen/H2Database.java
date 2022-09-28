@@ -1,4 +1,4 @@
-package main.java.com.Projekt.PDFWriter;
+package main.java.com.Projekt.PDFWriter.Klassen;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -17,7 +17,7 @@ public class H2Database {
     static String username = "Naili";           // optional, wenn festgelegt muss es allerdings benutzt werden
     static String password = "nami1980";        // optional, wenn festgelegt muss es allerdings benutzt werden
 
-    void datenbank() throws SQLException {
+    public void datenbank() throws SQLException {
 
         Connection connection = DriverManager.getConnection(jdbcURL, username, password);
         System.out.println("Mit eingebetteter H2 Datenbank verbunden.");
