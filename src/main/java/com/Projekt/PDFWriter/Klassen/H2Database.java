@@ -29,7 +29,7 @@ public class H2Database {
         System.out.println("Mit eingebetteter H2 Datenbank verbunden.");
 
         // Statement wird erzeugt und ausgeführt.
-        PreparedStatement ps = conn.prepareStatement("SELECT * FROM NAMEN ORDER BY ID");
+        PreparedStatement ps = conn.prepareStatement("SELECT * FROM DATEN ORDER BY ID");
         ResultSet rs = ps.executeQuery();
         convertResultSetToList(rs);
         rs.close();
@@ -53,5 +53,3 @@ public class H2Database {
             return list;
     }
 }
-
-
