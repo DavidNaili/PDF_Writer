@@ -18,11 +18,11 @@ import main.java.com.Projekt.PDFWriter.Klassen.Textverarbeitung;
 
 @SpringBootApplication
 
-public class Document_Creation {
+public class Application {
 
 
    public static void main(String args[]) throws IOException, SQLException {
-      SpringApplication.run(Document_Creation.class, args);
+      SpringApplication.run(Application.class, args);
  
       // Erstellen einer neuen Datenbank und mit dieser verbinden
       H2Database Datenbank = new H2Database();
@@ -56,7 +56,7 @@ public class Document_Creation {
       Sicherheit.sicherheit(document);
 
       // Speichern des Dokuments
-      document.save("F:/Projekt/PDF Dateien schreiben/PDF writer/Dokumente/Testfile.pdf");
+      document.save("F:/Projekt/PDF Dateien schreiben/PDF writer/Dokumente/Formular.pdf");
 
       // Konsolenausgabe
       System.out.println("PDF erfolgreich erstellt");

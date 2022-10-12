@@ -1,8 +1,7 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="de" xmlns:th="http://www.w3.org/1999/xhtml">
 	<head>
+		<meta charset="UTF-8">
 		<title>Datenerfassung</title>
 	</head>
 
@@ -10,31 +9,33 @@
 		<img src="F:/comline.jpg" align="right" vspace="10" hspace="30">
 		<h1>Eingabemaske zur Datenverarbeitung</h1>
 		<h2>Bitte füllen Sie die Felder aus:</h2>
-		<p>
+		
 		<form>
-			<label for="name">Name</label>
-			<input id="name" hspace="79">
+		<p>
+			Vorname
+			<br><input type="text" name="vorname" size=40 maxlength=40>
 		<br>
 		</p>
 		<p>
-			<label for="nachname">Nachname</label>
-			<input id="nachname" hspace="49">
+			Nachname
+			<br><input type="text" name="nachname" size=40 maxlength=40>
 		<br>
 		</p>
 		<p>
-			<label for="adresse">Adresse</label>
-			<input id="adresse" hspace="66">
+			Adresse
+			<br><input type="text" name="adresse" size=40 maxlength=40>
 		<br>
 		</p>
 		<p>
-			<label for="plz/wohnort">PLZ/Wohnort</label>
-			<input id="wohnort" hspace="29">
+			Wohnort
+			<br><input type="text" name="wohnort" size=40 maxlength=40>
 		<br>
 		</p>		  
 			<button type="reset">Eingaben zurücksetzen</button>
-			<button type="submit">Eingaben in Datenbank übertragen</button>
+			<button type="submit" value="Daten senden">Eingaben in Datenbank übertragen</button>
 			<button type="submit">Eingaben in PDF Dokument übertragen</button>
 		  </form>
+
 		<p>
 			<br><br>
 			Durch den Klick auf "Eingaben in Datenbank/PDF Dokument übertragen" stimmen Sie der Verarbeitung
@@ -43,5 +44,4 @@
 	</body>
 
 </html>
-
 
