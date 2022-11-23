@@ -9,11 +9,11 @@ import org.apache.pdfbox.pdmodel.PDPage;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import main.java.com.Projekt.PDFWriter.Klassen.BildHinzufuegen;
-import main.java.com.Projekt.PDFWriter.Klassen.DDocumentInformation;
+//import main.java.com.Projekt.PDFWriter.Klassen.BildHinzufuegen;
+//import main.java.com.Projekt.PDFWriter.Klassen.DDocumentInformation;
 import main.java.com.Projekt.PDFWriter.Klassen.H2Database;
-import main.java.com.Projekt.PDFWriter.Klassen.Protection;
-import main.java.com.Projekt.PDFWriter.Klassen.Rechteck;
+//import main.java.com.Projekt.PDFWriter.Klassen.Protection;
+//import main.java.com.Projekt.PDFWriter.Klassen.Rechteck;
 import main.java.com.Projekt.PDFWriter.Klassen.Textverarbeitung;
 
 @SpringBootApplication
@@ -43,7 +43,7 @@ public class Application {
       Textverarbeitung Text = new Textverarbeitung();
       Text.text(document);
 
-      BildHinzufuegen Bild = new BildHinzufuegen();
+      /*BildHinzufuegen Bild = new BildHinzufuegen();
       Bild.bild(document);
 
       Rechteck Struktur = new Rechteck();
@@ -53,7 +53,7 @@ public class Application {
       Information.information(document);
 
       Protection Sicherheit = new Protection();
-      Sicherheit.sicherheit(document);
+      Sicherheit.sicherheit(document);*/
 
       // Speichern des Dokuments
       document.save("F:/Projekt/PDF Dateien schreiben/PDF writer/Dokumente/Formular.pdf");
